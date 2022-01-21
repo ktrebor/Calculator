@@ -15,7 +15,7 @@ body {
 }
 
 .calculator {
-    background-color: rgb(136, 114, 114);
+    background-color: #212121;
     width: 350px;
     height: 600px;
     border-radius: 50px;
@@ -25,23 +25,38 @@ body {
 
 .display {
     flex: 1;
-    background-color: rgb(32, 32, 32);
-    border-radius: 40px 40px 0 0;
+    background-color: rgb(202, 202, 202);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 10px 20px;
+    margin: 10px;
 }
 
 .user-inputs {
     flex: 3;
-    background-color: rgb(7, 7, 7);
+    background-color: #212121;
     border-radius: 0 0 40px 40px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     height: 100%;
     grid-gap: 1rem;
-    padding: 1rem;
-    background: #212121;
+    padding: 1rem; 
 }
 
-.user-inputs button {
+.current-operand {
+    font-size: 3rem;
+    color: white;    
+}
+
+.previous-operand {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.user-inputs > button {
     font-size: 2rem;
     padding: 1rem 0;
     font-weight: 700;
@@ -66,9 +81,9 @@ button.operators {
 }
 
 button.allclear, button.clear{
-    background-color: grey;
+    background-color: rgb(155, 155, 155);
 }
 
 button:hover {
-    transform: translateY(-0.2rem);	
+    transform: scale(1.1);	
 }
