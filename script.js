@@ -28,6 +28,10 @@ function divide(a, b) {
     return a / b;
 }
 
+function exponent(a, b) {
+	return Math.pow(a, b);
+}
+
 function operate(operator, a, b) {
     a = Number(a)
     b = Number(b)
@@ -41,6 +45,8 @@ function operate(operator, a, b) {
       case '÷':
         if (b === 0) return null
         else return divide(a, b)
+      case '^':
+        return exponent(a, b)
       default:
         return null
   }
@@ -54,7 +60,8 @@ numberButtons.forEach((button) =>
 function appendNumber(number) {
   if (currentOperand.textContent === '0' || shouldResetScreen)
     resetScreen()
-  currentOperand.textContent += number  
+  currentOperand.textContent += number
+  
 }
 
 function resetScreen() {
